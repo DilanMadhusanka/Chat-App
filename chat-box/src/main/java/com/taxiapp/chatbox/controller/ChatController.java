@@ -7,11 +7,15 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.client.RestTemplate;
 
 import com.taxiapp.chatbox.models.ChatMessage;
+import com.taxiapp.chatbox.models.UserDetails;
 
 @Controller
 public class ChatController {
+	
+	RestTemplate restTemplate;
 
 	/*-------------------- Group (Public) chat--------------------*/
 	@MessageMapping("/sendMessage")
@@ -24,6 +28,7 @@ public class ChatController {
 	@SendTo("/topic/pubic")
 	public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor) {
 		// Add user in web socket session
+		restTemplate.getForEntity("", UserDetails.class);
 		headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
 		return chatMessage;
 	}
