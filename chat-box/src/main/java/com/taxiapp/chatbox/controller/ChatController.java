@@ -1,6 +1,7 @@
 package com.taxiapp.chatbox.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
@@ -15,6 +16,7 @@ import com.taxiapp.chatbox.models.UserDetails;
 @Controller
 public class ChatController {
 	
+	@Autowired
 	RestTemplate restTemplate;
 
 	/*-------------------- Group (Public) chat--------------------*/
@@ -28,7 +30,8 @@ public class ChatController {
 	@SendTo("/topic/pubic")
 	public ChatMessage addUser(@Payload ChatMessage chatMessage, SimpMessageHeaderAccessor headerAccessor) {
 		// Add user in web socket session
-		restTemplate.getForEntity("", UserDetails.class);
+		ResponseEntity<UserDetails> user = restTemplate.getForEntity("http://authentication/api/auth/signin", UserDetails.class);
+		System.out.println(user);
 		headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
 		return chatMessage;
 	}
