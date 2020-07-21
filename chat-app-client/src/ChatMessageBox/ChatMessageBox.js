@@ -1,6 +1,11 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 
+import Menu from '../MenuAppBar';
+import Aside from '../Aside';
+import Login from '../Login';
+import Footer from '../Footer';
+
 import './ChatMessageBox.css';
 import userImage from '../userImage.png';
 
@@ -151,6 +156,15 @@ class ChatMessageBox extends React.Component {
             object.scrollTop = object.scrollHeight;
     }
 
+    // getRandomColor = () => {
+    //   var letters = '0123456789ABCDEF';
+    //   var color = '#';
+    //   for (var i = 0; i < 6; i++) {
+    //     color += letters[Math.floor(Math.random() * 16)];
+    //   }
+    //   return color;
+    // }
+
     componentDidUpdate() {
         if (this.state.error) {
             throw new Error('Unable to connect to chat room server.');
@@ -173,8 +187,8 @@ class ChatMessageBox extends React.Component {
         );
 
     }
-
     render() {
+
         return (
             <div>
                 {this.state.channelConnected ?

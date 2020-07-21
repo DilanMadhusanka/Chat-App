@@ -2,6 +2,9 @@ import React from 'react';
 import { TextField, List, ListItem, Avatar, ListItemText, ListItemSecondaryAction, Tooltip, IconButton } from '@material-ui/core';
 import CommentIcon from '@material-ui/icons/Comment';
 
+import userImage from '../userImage.png';
+import PrivateMessageBoxx from '../PrivateMessageBox';
+
 export default class Aside extends React.Component {
     constructor(props) {
         super(props);
