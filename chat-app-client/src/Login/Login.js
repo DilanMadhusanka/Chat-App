@@ -1,5 +1,6 @@
 import React from 'react';
 import { TextField, Button, Card } from '@material-ui/core';
+import './Login.css';
 
 export default class Login extends React.Component {
     constructor(props) {
@@ -19,10 +20,11 @@ export default class Login extends React.Component {
     handleConnectPublicly = () => {
         this.props.connect(this.state.username, false)
     }
+
     render() {
         return (
             <div className="ui center aligned container">
-                <br /><br /><br />
+                <br/><br/><br/>
                 <Card className="ui segment" variant="outlined">
                     <TextField
                         id="user"
@@ -34,7 +36,7 @@ export default class Login extends React.Component {
                     <br />
                     <Button variant="contained" color="primary" onClick={this.handleConnectPublicly} >
                         Start Chatting
-                    </Button>
+             </Button>
                 </Card>
 
             </div>

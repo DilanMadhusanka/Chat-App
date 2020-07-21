@@ -1,5 +1,6 @@
 import React from 'react';
 import { TextField } from '@material-ui/core';
+import './Footer.css';
 
 export default class Footer extends React.Component {
     constructor(props) {
