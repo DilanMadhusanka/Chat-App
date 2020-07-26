@@ -1,8 +1,10 @@
 import React from 'react';
 import { AppBar, Toolbar, IconButton, Menu, Badge, MenuItem, Typography } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import BellIcon from 'react-bell-icon';
 import msgImage from '../msgImage.png';
+import './MenuAppBar.css';
 
 import Notifications from '../NotificationComponent';
 
@@ -128,7 +130,7 @@ export default class MenuAppBar extends React.Component {
                 <AppBar position="static" style={{ background: 'black' }}>
                     <Toolbar>
                         <IconButton className="" color="inherit" aria-label="Menu">
-                            <Menu onClick={this.handleClick} />
+                            <MenuIcon onClick={this.handleClick} />
                         </IconButton>
                         <Typography variant="title" color="inherit" className="">
                             {this.props.username} <span> </span> <span className="status green"></span>
