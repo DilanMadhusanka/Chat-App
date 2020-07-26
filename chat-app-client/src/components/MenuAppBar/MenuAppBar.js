@@ -3,10 +3,10 @@ import { AppBar, Toolbar, IconButton, Menu, Badge, MenuItem, Typography } from '
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import BellIcon from 'react-bell-icon';
-import msgImage from '../msgImage.png';
+import msgImage from '../../msgImage.png';
 import './MenuAppBar.css';
 
-import Notifications from '../NotificationComponent';
+import Notifications from '../../NotificationComponent';
 
 var stompClient = null;
 export default class MenuAppBar extends React.Component {

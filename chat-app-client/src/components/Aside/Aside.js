@@ -3,7 +3,7 @@ import { TextField, List, ListItem, Avatar, ListItemText, ListItemSecondaryActio
 import CommentIcon from '@material-ui/icons/Comment';
 import './Aside.css'
 
-import userImage from '../userImage.png';
+import userImage from '../../userImage.png';
 import PrivateMessageBoxx from '../PrivateMessageBox';
 
 export default class Aside extends React.Component {

@@ -7,7 +7,7 @@ import Login from '../Login';
 import Footer from '../Footer';
 
 import './ChatMessageBox.css';
-import userImage from '../userImage.png';
+import userImage from '../../userImage.png';
 
 var stompClient = null;
 class ChatMessageBox extends React.Component {
