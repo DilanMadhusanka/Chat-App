@@ -1,15 +1,14 @@
 import React from 'react';
-import ChatMessageBox from './components/ChatMessageBox/ChatMessageBox'
+// import ChatMessageBox from './components/ChatMessageBox/ChatMessageBox'
 // Re-using my ErrorBoundary Component 
 // import ErrorBoundary from 'react-error-boundary';
 
-import React from 'react';
 import LoginComponent from './components/LoginComponent';
 import { Router, Switch, Route } from 'react-router-dom';
-import Home from './Home';
+import Home from './components/Home';
 import NavBar from './components/NavBar';
 import Profile from './components/Profile';
-import history from '../history'
+import history from './history'
 import BoardUser from './components/user-board.component';
 import BoardModerator from './components/moderator-board.component'
 import BoardAdmin from './components/admin-board.component'
