@@ -8,7 +8,7 @@ import LoginComponent from './components/LoginComponent';
 import { Router, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import NavBar from './components/NavBar';
-import Profile from './Profile';
+import Profile from './components/Profile';
 import history from '../history'
 import BoardUser from './components/user-board.component';
 import BoardModerator from './components/moderator-board.component'
