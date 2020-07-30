@@ -158,7 +158,10 @@ class ChatMessageBox extends React.Component {
             object.scrollTop = object.scrollHeight;
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps) {
+        if (this.props.user !== prevProps.user) {
+            this.connect(this.props.user.username)
+        }
         if (this.state.error) {
             throw new Error('Unable to connect to chat room server.');
         }
@@ -168,6 +171,8 @@ class ChatMessageBox extends React.Component {
     }
 
     componentDidMount() {
+        this.props.getCurrentUser();
+
         this.setState({
             curTime: new Date().toLocaleString()
         })
