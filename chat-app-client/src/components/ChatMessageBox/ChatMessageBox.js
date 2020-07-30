@@ -3,7 +3,7 @@ import Paper from '@material-ui/core/Paper';
 
 import Menu from '../MenuAppBar';
 import Aside from '../Aside';
-import Login from '../Login';
+import CircularProgressIcon from '../CircularProgressIcon';
 import Footer from '../Footer';
 
 import './ChatMessageBox.css';
@@ -252,8 +252,7 @@ class ChatMessageBox extends React.Component {
 
 
                     ) : (
-                        <Login connect={this.connect} />
-
+                        <CircularProgressIcon />
                     )
                 }
             </div>
