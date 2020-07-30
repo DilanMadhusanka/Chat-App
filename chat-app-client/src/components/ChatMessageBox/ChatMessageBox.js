@@ -8,6 +8,8 @@ import Footer from '../Footer';
 
 import './ChatMessageBox.css';
 import userImage from '../../userImage.png';
+import { getCurrentUser } from '../../actions';
+import { connect } from 'react-redux';
 
 var stompClient = null;
 class ChatMessageBox extends React.Component {
@@ -180,6 +182,7 @@ class ChatMessageBox extends React.Component {
     }
 
     render() {
+        console.log(this.props.user)
         return (
             <div>
                 {this.state.channelConnected ?
@@ -253,4 +256,8 @@ class ChatMessageBox extends React.Component {
     }
 }
 
-export default ChatMessageBox;
+const mapsStateToProps = state => {
+    return { user: state.user }
+}
+
+export default connect(mapsStateToProps, { getCurrentUser })(ChatMessageBox);
