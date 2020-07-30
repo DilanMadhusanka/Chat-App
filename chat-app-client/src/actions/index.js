@@ -25,7 +25,7 @@ export const login = formValues => async dispatch => {
         response => {
             localStorage.setItem("user", JSON.stringify(response.data))
             dispatch({ type: 'SIGN_IN', payload: { ...response.data } })
-            history.push('/profile')
+            history.push('/chat')
         },
         error => {
             const response =
