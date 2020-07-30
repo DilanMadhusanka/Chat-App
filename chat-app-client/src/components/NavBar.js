@@ -52,8 +52,8 @@ class NavBar extends React.Component {
                         </Link>
                     }
                     {this.isUser() &&
-                        <Link to={"/user"} className="ui item">
-                            User
+                        <Link to={"/chat"} className="ui item">
+                            Chat Room
                         </Link>
                     }
                     <div className="right menu">
