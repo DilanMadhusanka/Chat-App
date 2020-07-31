@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { getUserBoard } from '../actions';
+import { getUserBoard } from '../../actions';
 
 class BoardUser extends React.Component {
 

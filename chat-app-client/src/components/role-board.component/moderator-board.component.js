@@ -1,18 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import { getAdminBoard } from '../actions';
+import { getModeratorBoard } from '../../actions';
 
-class BoardAdmin extends React.Component {
+class BoardModerator extends React.Component {
 
     componentDidMount() {
-        this.props.getAdminBoard()
+        this.props.getModeratorBoard()
     }
 
     render() {
         return (
             <div className="ui container">
                 <div className="ui segment">
-                    <h3>{this.props.admin}</h3>
+                    <h3>{this.props.moderator}</h3>
                 </div>
             </div>
         );
@@ -20,7 +20,7 @@ class BoardAdmin extends React.Component {
 }
 
 const mapsStateToProps = state => {
-    return { admin: state.adminBoard }
+    return { moderator: state.modBoard }
 }
 
-export default connect(mapsStateToProps, { getAdminBoard })(BoardAdmin)
+export default connect(mapsStateToProps, { getModeratorBoard })(BoardModerator)

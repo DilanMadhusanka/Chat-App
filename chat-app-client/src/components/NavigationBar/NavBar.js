@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getCurrentUser, logOut } from '../actions';
+import { getCurrentUser, logOut } from '../../actions';
 import { connect } from 'react-redux';
 
 class NavBar extends React.Component {

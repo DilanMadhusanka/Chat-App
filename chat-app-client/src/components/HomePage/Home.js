@@ -1,5 +1,5 @@
 import React from 'react';
-import { getPublicContent } from '../actions';
+import { getPublicContent } from '../../actions';
 import { connect } from 'react-redux';
 
 class Home extends React.Component {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { CircularProgress } from '@material-ui/core';
-import './Login.css';
+import './CircularProgressIcon.css';
 
 export default class CircularProgressIcon extends React.Component {
 

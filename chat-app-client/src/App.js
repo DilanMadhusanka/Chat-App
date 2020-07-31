@@ -3,16 +3,15 @@ import React from 'react';
 // Re-using my ErrorBoundary Component 
 // import ErrorBoundary from 'react-error-boundary';
 
-import LoginComponent from './components/LoginComponent';
+import LoginComponent from './components/Authentication/LoginComponent';
 import { Router, Switch, Route } from 'react-router-dom';
-import Home from './components/Home';
-import NavBar from './components/NavBar';
-import Profile from './components/Profile';
+import Home from './components/HomePage/Home';
+import NavBar from './components/NavigationBar/NavBar';
 import history from './history'
-import BoardUser from './components/user-board.component';
-import BoardModerator from './components/moderator-board.component'
-import BoardAdmin from './components/admin-board.component'
-import SignUpComponent from './components/SignUpComponent';
+import BoardUser from './components/role-board.component/user-board.component';
+import BoardModerator from './components/role-board.component/moderator-board.component'
+import BoardAdmin from './components/role-board.component/admin-board.component'
+import SignUpComponent from './components/Authentication/SignUpComponent';
 import ChatMessageBox from './components/ChatMessageBox/ChatMessageBox';
 
 class App extends React.Component {
@@ -34,7 +33,6 @@ class App extends React.Component {
         <Switch>
           <Route exact path={["/", "/home"]} component={Home} />
           <Route exact path={"/login"} component={LoginComponent} />
-          <Route exact path={"/profile"} component={Profile} />
           <Route exact path={"/user"} component={BoardUser} />
           <Route exact path={"/moderator"} component={BoardModerator} />
           <Route exact path={"/admin"} component={BoardAdmin} />
